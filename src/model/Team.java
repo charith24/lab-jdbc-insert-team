@@ -1,6 +1,6 @@
 package model;
 
-public class Team<City>{
+public class Team{
 	String name;
 	String coach;
 	String captain;

@@ -1,6 +1,7 @@
 package dao;
 
 import java.io.IOException;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -14,7 +15,7 @@ public class TeamDAO{
 		 String name=team.getName();
 		 String coach=team.getCoach();
 		 String captain=team.getCaptain();
-		 City city=(City) team.getCity();
+		 City city = team.getCity();
 		 Connection cm =ConnectionManager.getConnection();
 		 String sql="INSERT INTO TEAM(NAME,COACH,CAPTAIN,CITY_ID,CITY_NAME)VALUES(?,?,?,?,?)";
 		 PreparedStatement st=cm.prepareStatement(sql);

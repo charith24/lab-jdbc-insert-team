@@ -27,7 +27,7 @@ public class CityDAO{
 		long id=city.getCityId();
 		String cityname=city.getCityName();
 		Connection cm = ConnectionManager.getConnection();
-		String sql="INSERT INTO CITY(id,city_name)VALUES(?,?)";
+		String sql="INSERT INTO CITY(city_id,city_name)VALUES(?,?)";
 		PreparedStatement st=cm.prepareStatement(sql);
 		st.setLong(1,id);
 		st.setString(2, cityname);
